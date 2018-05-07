@@ -88,30 +88,81 @@
   	\maketitle
 	\part{Why Transfer Learning is fun and profit?}
 	
-	\section{When do we need transfer learning?}
-	%%%%%%%%%%%%%%%%
-	\begin{frame}{When do we need transfer learning?}
-	Lorem ipsum
+	\section{Let's imagine we would like to create a model for image processing}
+	\begin{frame}{first layer}
+		\begin{itemize}
+			\item data preprocessing
+			\item feature extraction
+		\end{itemize}
 	\end{frame}
-	%%%%%%%%%%%%%%%%
-	\section{How we can speed up the learning process with transfer learning?}
-	%%%%%%%%%%%%%%%%
-	\begin{frame}{How we can speed up the learning process with transfer learning?}
-	Lorem ipsum
+Zz
+	\begin{frame}{Middle layers}
+		\begin{itemize}
+			\item what shall be in the middle layers
+			\item btw, what kind of a network shall it be?
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{The last layer}
+		\begin{itemize}
+			\item ...
+		\end{itemize}
 	\end{frame}
 
-	\part{How does Transfer Learning work?}
+	\begin{frame}{But there is a problem...}
+		We are no researchers, who knows what is the best solution to our specific case scenario. 
+		Trial and error, blind luck and intuition.
+	 \end{frame}
+ 
+ 	\section{But there is a lot of well designed models}
+	\begin{frame}{Big minds have done it better (probably)}
+		 \begin{itemize}
+		 	\item they have huge amounts of data (image net is around 14 million of labeled images!)
+		 	\item these models have been already trained (training on GPU can take weeks)
+		 \end{itemize}
+	\end{frame}
+
+ 	\begin{frame}{What wouzld happen if we've taken pretrained model and tried to use it?)
+		 \begin{itemize}
+		 	\item it will not exactly work
+		 	\item let's say we would like to classify types of joghurt in a factory, rather than a butterfly and an airplane
+		 \end{itemize}
+	\end{frame}
+
+\section{So, what is this tranfer learning for real?}
+ 	\begin{frame}{Can we train the defined model on our dataset?)
+		\begin{itemize}
+			\item let's say that we have a huge amount of labeled data - that's cool
+			\tem we're no researchers - we can take already designed neural network scheme
+			\item and then - train it on our dataset
+		\end{itemize}
+	\end{frame}
+ 
+ 	\begin{frame}{But what if I don't have a huge dataset?}
+ 		\begin{itemize}
+		 	But... will that work? 
+		 \end{itemize}
+	\end{frame}
+
+\section{But first, let's talk a bit about theory...}
+  	\begin{frame}{How does transfer learning work?}
+		s%obrazek
+	 \end{frame}
+ 
+ \section{Once again - will this really work?}
+  	\begin{frame}{Examples}
+		Example time!
+	\end{frame}
+  	
+  	\section{Talk is cheap. Show me the code!}
+	\begin{frame}{Examples}
+	Example time!
+	\end{frame}
 	
-	\part{Time for you to build your own \textit{teslas}!}
-
-	\appendix
-	%%%%%%%%%%%%%%%%%%%%%%%
-	\begin{frame}[allowframebreaks]{Bibliography}
-  		\begin{thebibliography}{9}
-    			\setbeamertemplate{bibliography item}[online]
-      				\bibitem{wikibook}{Wikibooks \newblock \LaTeX/Source Code Listings \newblock \url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}}
-      				\bibitem{beamer}{Till Tantau, Joseph Wright, Vedran Miletić \newblock The beamer class \newblock \url{http://mirror.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf}}
-  		\end{thebibliography}
+	
+\part{Time for you to build your own \textit{teslas}!}
+	\begin{frame}{How to get started easily}
+	Link to the repository
 	\end{frame}
+
 \end{document}
 
