@@ -188,10 +188,44 @@
  \section{Once again - will this really work?}
   	\begin{frame}{Examples}
 		For our examples, we've taken Google's MobileNet (\url{https://arxiv.org/abs/1704.04861}) model, using reference TensorFlow implementation. We've also downloaded weights trained on the COCO dataset (\url{http://cocodataset.org/\#home}).
+		We've only done 1000 steps of training with learning rate equal to 0.003.
+		Our dataset consisted of only 360 labeled photos.
 	\end{frame}
 	\begin{frame}{Examples - COCO}
-		\includegraphics{images/coco-examples}
+		\includegraphics[scale=0.5]{images/coco-examples}
 	\end{frame}
+
+  	\begin{frame}{Examples - first example}
+		First example used weights trained on the COCO dataset and used this as a base for training on our dataset.
+	\end{frame}
+  	\begin{frame}{Examples}
+		\includegraphics[scale=0.3]{examples/comparison_1000_step/session_one-6.jpg}
+	\end{frame}
+  	\begin{frame}{Examples}
+		\includegraphics[scale=0.3]{examples/comparison_1000_step/session_one-10.jpg}
+	\end{frame}
+	
+  	\begin{frame}{Examples - second example}
+		Second example used the MobileNet model with weights trained on COCO dataset without additional training on our dataset.
+	\end{frame}
+  	\begin{frame}{Examples}
+		\includegraphics[scale=0.3]{examples/no_retraining_of_stock_model/session_one-6.jpg}
+	\end{frame}
+  	\begin{frame}{Examples}
+		\includegraphics[scale=0.3]{examples/no_retraining_of_stock_model/session_one-10.jpg}
+	\end{frame}
+	
+	
+  	\begin{frame}{Examples - third example}
+		Third example used the MobileNet model with random initial weights.
+	\end{frame}
+  	\begin{frame}{Examples}
+		\includegraphics[scale=0.3]{examples/no_fine_tune_checkpoint_1000_step/session_one-6.jpg}
+	\end{frame}
+  	\begin{frame}{Examples}
+		\includegraphics[scale=0.3]{examples/no_fine_tune_checkpoint_1000_step/session_one-10.jpg}
+	\end{frame}
+	
   	
   	\section{Talk is cheap. Show me the code!}
 	\begin{frame}{Examples}
