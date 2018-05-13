@@ -1,0 +1,35 @@
+wstępny:
+
+a) jakie są kolejne kroki przy tworzeniu modelu
+ - trzeba mieć pierwszą warstwę + preprocesing danych, feature extraction
+ - jak mają wyglądać środkowe warstwy, jakiego typu to ma być sieć, (rekurencyjne i inne cuda, czy proste forward-cośtam-cośtam)
+ - zaprojektować ostatnią warstwę, która jest właściwą klasyfikacją -> wypluwa nam wynik (zarąbać z UPEL)
+ - well.. nikt nie wie co będzie najlepsze do danej sytuacji; intuicja i sztuka;
+
+b) Ale: istnieje dużo ogólnie dostępnych modeli, które zostały zaprojektowane przez wielkie mózgi, a następnie wyuczone na potężnych zbiorach danych (imagenet -> 14 mln olabelkowanych zdjęć), tylko -> nawet jak sobie to ukradniemy, to wyuczenie sieci na wielu GPU może trwać nawet 2-3 tygodnie \refka stanford.
+
+Więć: fajnie by bylo wykorzystać te modele i wykorzystać do własnych celi.
+
+Można oczywiście wziąć gotowy model i go używać. Ale -> to nie zadziała. 
+W rzeczywistości spotykać będziemy się z problemami -> eg. na taśmie produkcyjnej rozpoznać dwa.., niekoniecznie kwiatek samolot
+
+c) Więc skoro chcemy wykorzystać model i zaadaptować go, nie poświęcać za dużo czasu na trenowanie, nie mamy dużo zasobów
+Wziąć gotowy model przygotowany do ogólnych zastosowań; jego wagi i wyuczenie; wyspecyfikować go następnie do naszych problemów, wyuczyć go na naszym, zdecydowanie mniejszym datasecie.
+
+d) Jeśli mamy duży zbiór naszych danych, i posiadamy go olabelkowany i fajnie; i jak wydaje nam się, że to wystarczy do wyuczenia modelu. W takim wypadku możemy nie poświęcać czasu na projektowanie struktury modelu, a następnie wyuczyć go od podstwa na naszym datasecie.
+
+e) natomiast - to jest ten cool part, ; jak mamy malutki dataset, bierzemy cały model, douczyć go na naszym mniejszym datasecie...
+
+f) czy to będzie działać? 
+Zdecydowanie lepsze efekty niż uczenie od podstaw!
+
+... ale jak to wygląda w teoretycznej praktyce? 
+(rysunek przykładowej sieci)
+pierwsza część; ficzer ekstrakszyn; pozostaje zwykle bez zmian. Jeśli nasz problem jest z kategorii CV, lub Object Classification -> to ficzer ekstraktor ma operować na zdjęciach, raczej tego nie zmienimy. 
+
+(zdjęcie Kuby, jak jest smutny i labelkuje)
+
+Zachowujemy też środek modelu.
+
+Prawdopodobnie chcemy zmienć ostatnie warstwy klasyfikatora. Gdyż nasze etykiety będą inne niż te w oryginalnym modelu. Przykładowo: (image cocodataset), modele wyuczone na datasecie posiadają 80 kategorii obiektów które potrafią sklasyfikować. A w naszym rillajfowym domain specific datasecie może być mniej lub więcej, ale żadko kiety się to powtórzy z oryginalnym.
+
