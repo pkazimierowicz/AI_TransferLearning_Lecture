@@ -89,34 +89,47 @@
 	\part{Why Transfer Learning is fun and profit?}
 	\section{Introduction}
 		\begin{frame}{What will be talking about?}
-			Transfer learning for Convolutional Neural Networks (ConvNets)
+			Transfer learning (Inductive transfer) for Convolutional Neural Networks (ConvNets). 
+			\newline
+			\newline
+			Process where structure or knowledge from a learning problem is used to enhance learning on a related problem\footnote{West, Jeremy; Ventura, Dan; Warnick, Sean (2007), "A Theoretical Foundation for Inductive Transfer", \url{http://cpms.byu.edu/springresearch/abstract-entry?id=861}}. 
+			\newline
+			\newline
+			Example: \newline
+			Take an image classification model that is capable to correctly label common objects (a dog, a tree or an airplane)
+			\newline 
+			Retrain it to label types of yoghurt on a production lane.
 		\end{frame}
 	
 	\section{Steps needed to be designed for image classification model:}
-	\begin{frame}
-		Steps needed to be designed for image classification model:
+	\begin{frame}{First of all - why do we need Transfer Learning?}
+		There is a lot of to be designed to build an image classification model:
 		\begin{itemize}
-			\item First layer:
+			\item first layer:
 			\begin{itemize}
 				\item data preprocessing,
 				\item feature extraction,
 			\end{itemize}
 
-		\item Middle layers:
+		\item middle layers:
 			\begin{itemize}
 				\item what shall be in the middle layers
 				\item btw, what kind of a network shall it be?
 			\end{itemize}
 		
-		\item The last layer:
+		\item the last layer:
 			\begin{itemize}
-				\item actual classification and labels
+				\item actual classification and labels.
 			\end{itemize}
 		\end{itemize}
 	 \end{frame}
+ 
 	\begin{frame}{But there is a problem...}
-		We are no researchers, who knows what is the best solution to our specific case scenario. 
-		Trial and error, blind luck and intuition.
+		We usually don't really know what is the best solution to our specific case scenario.
+		\newline
+		\newline
+		Usual methods consist of trial and error, blind luck, and intuition.
+	
 	 \end{frame}
  
  	\section{But there is a lot of well designed models}
