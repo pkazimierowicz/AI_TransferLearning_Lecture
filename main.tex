@@ -146,25 +146,30 @@
 	\end{frame}
 % it breaks here
 
- 	\begin{frame}{What wouzld happen if we've taken pretrained model and tried to use it?}
+ 	\begin{frame}{Can we just take a pretrained model and use it?}
+ 		Of course we can, but:
 		 \begin{itemize}
-		 	\item it will not exactly work
-		 	\item let's say we would like to classify types of joghurt in a factory, rather than a butterfly and an airplane
+		 	\item it will not exactly work,
+		 	\item there is difference between butterflies, airplanes and printed circuit boards.
 		 \end{itemize}
 	\end{frame}
 
 \section{So, what is this tranfer learning for real?}
  	\begin{frame}{Can we train the defined model on our dataset?}
+ 	We can take some shortcuts:
 		\begin{itemize}
-			\item let's say that we have a huge amount of labeled data - that's cool
-			\item we're no researchers - we can take already designed neural network scheme
-			\item and then - train it on our dataset
+			\item let's say that we have a huge amount of labeled data - that's cool,
+			\item we're no researchers - we can take already designed neural network scheme,
+			\item after training it on our dataset - we might expect good results.
 		\end{itemize}
 	\end{frame}
  
  	\begin{frame}{But what if I don't have a huge dataset?}
+ 		If we have a significantly smaller dataset, we could try:
  		\begin{itemize}
-		 	\item But... will that work? 
+		 	\item take the weights from the model as it is already trained,
+		 	\item retrain it from this point on our dataset,
+		 	\item depending on how similar our problem is to the original one - that good results.
 		 \end{itemize}
 	\end{frame}
 
@@ -172,7 +177,14 @@
   	\begin{frame}{How does transfer learning work?}
 		s%obrazek
 	 \end{frame}
- 
+  	\begin{frame}{Let's sum this up!}
+		We have three approaches possible to transfer learning:
+		 \begin{itemize}
+		 	\item take the model as it is - and use it,
+		 	\item take the model structure and train it on our (huge) dataset,
+		 	\item take the model and it's weights and train it on our smaller dataset.
+		 \end{itemize}
+	\end{frame}
  \section{Once again - will this really work?}
   	\begin{frame}{Examples}
 		Example time!
