@@ -137,7 +137,7 @@
 	\begin{frame}{Big minds have done it better (probably)}
 	Huge research centers and companies have the knowledge and resources to design and train good models:
 		 \begin{itemize}
-		 	\item they have huge amounts of data (image net is around 14 million of labeled images!)
+		 	\item they have huge amounts of data (ImageNet has around 14 million of labeled images!)
 		 	\item these models have been already trained (training on GPU can take weeks)
 		 \end{itemize}
 	\end{frame}
@@ -167,8 +167,8 @@
  	\begin{frame}{But what if I don't have a huge dataset?}
  		If we have a significantly smaller dataset, we could try:
  		\begin{itemize}
-		 	\item take the weights from the model as it is already trained,
-		 	\item retrain it from this point on our dataset,
+		 	\item take the weights from the model as it is already trained on some huge, generic dataset,
+		 	\item retrain it from this point on our dataset - possibly freezing first and maybe even middle layers,
 		 	\item depending on how similar our problem is to the original one - that good results.
 		 \end{itemize}
 	\end{frame}
@@ -187,8 +187,8 @@
 	\end{frame}
  \section{Once again - will this really work?}
   	\begin{frame}{Examples}
-		For our examples, we've taken Google's MobileNet (\url{https://arxiv.org/abs/1704.04861}) model, using reference TensorFlow implementation. We've also downloaded weights trained on the COCO dataset (\url{http://cocodataset.org/\#home}).
-		We've only done 1000 steps of training with learning rate equal to 0.003.
+		For our examples, we've taken Google's MobileNet (\url{https://arxiv.org/abs/1704.04861}) model, using reference TensorFlow implementation. We've also downloaded weights trained on the COCO dataset (\url{http://cocodataset.org/\#home}).\newline
+		We've only done 1000 steps of training with learning rate equal to 0.003.\newline
 		Our dataset consisted of only 360 labeled photos.
 	\end{frame}
 	\begin{frame}{Examples - COCO}
