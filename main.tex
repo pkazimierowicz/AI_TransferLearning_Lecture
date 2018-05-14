@@ -85,21 +85,21 @@
 	\part{Why Transfer Learning is fun and profit?}
 	\section{Introduction}
 		\begin{frame}{What will be talking about?}
-		\begin{block}{Transfer learning (Inductive transfer) for Convolutional Neural Networks (ConvNets).}
-			\newline
-			\newline
-			Process where structure or knowledge from a learning problem is used to enhance learning on a related problem\footnote{West, Jeremy; Ventura, Dan; Warnick, Sean (2007), "A Theoretical Foundation for Inductive Transfer", \url{http://cpms.byu.edu/springresearch/abstract-entry?id=861}}. 
-			\newline
-			\newline
+			\begin{block}{Transfer learning (Inductive transfer) for Convolutional Neural Networks (ConvNets)}
+				\newline
+				\newline
+				Process where structure or knowledge from a learning problem is used to enhance learning on a related problem\footnote{West, Jeremy; Ventura, Dan; Warnick, Sean (2007), "A Theoretical Foundation for Inductive Transfer", \url{http://cpms.byu.edu/springresearch/abstract-entry?id=861}}. 
+				\newline
+				\newline
 			\end{block}
 			Example: \newline
 			Take an image classification model that is capable to correctly label common objects (a dog, a tree or an airplane)
-			\newline 
 			Retrain it to label types of yoghurt on a production lane.
+			
 		\end{frame}
 	
 	\section{Steps needed to be designed for image classification model:}
-	\begin{frame}{First of all - why do we need Transfer Learning?}
+	\begin{frame}{First of all -- why do we need Transfer Learning?}
 		There is a lot of to be designed to build an image classification model:
 		\begin{itemize}
 			\item first layer:
@@ -110,7 +110,7 @@
 
 		\item middle layers:
 			\begin{itemize}
-				\item what shall be in the middle layers
+				\item what shall be in the middle layers,
 				\item btw, what kind of a network shall it be?
 			\end{itemize}
 		
@@ -138,8 +138,8 @@
 	\begin{frame}{Big minds have done it better (probably)}
 	Huge research centers and companies have the knowledge and resources to design and train good models:
 		 \begin{itemize}
-		 	\item they have huge amounts of data (ImageNet has around 14 million of labeled images!)
-		 	\item these models have been already trained (training on GPU can take weeks)
+		 	\item they have huge amounts of data (ImageNet has around 14 million of labeled images!),
+		 	\item these models have been already trained (training on GPU can take weeks).
 		 \end{itemize}
 	\end{frame}
 
@@ -159,9 +159,9 @@
  	\begin{frame}{Can we train the defined model on our dataset?}
  	We can take some shortcuts:
 		\begin{itemize}
-			\item let's say that we have a huge amount of labeled data - that's cool,
-			\item we're no researchers - we can take already designed neural network scheme,
-			\item after training it on our dataset - we might expect good results.
+			\item let's say that we have a huge amount of labeled data -- that's cool,
+			\item we're no researchers -- we can take already designed neural network scheme,
+			\item after training it on our dataset -- we might expect good results.
 		\end{itemize}
 	\end{frame}
  
@@ -169,8 +169,8 @@
  		If we have a significantly smaller dataset, we could try:
  		\begin{itemize}
 		 	\item take the weights from the model as it is already trained on some huge, generic dataset,
-		 	\item retrain it from this point on our dataset - possibly freezing first and maybe even middle layers,
-		 	\item depending on how similar our problem is to the original one - that good results.
+		 	\item retrain it from this point on our dataset -- possibly freezing first and maybe even middle layers,
+		 	\item depending on how similar our problem is to the original one -- that good results.
 		 \end{itemize}
 	\end{frame}
 
@@ -181,22 +181,22 @@
   	\begin{frame}{Let's sum this up!}
 		We have three approaches possible to transfer learning:
 		 \begin{itemize}
-		 	\item take the model as it is - and use it,
+		 	\item take the model as it is -- and use it,
 		 	\item take the model structure and train it on our (huge) dataset,
-		 	\item take the model and it's weights and train it on our smaller dataset.
+		 	\item take the model and its weights and train it on our smaller dataset.
 		 \end{itemize}
 	\end{frame}
- \section{Once again - will this really work?}
+ \section{Once again -- will this really work?}
   	\begin{frame}{Examples}
 		For our examples, we've taken Google's MobileNet (\url{https://arxiv.org/abs/1704.04861}) model, using reference TensorFlow implementation. We've also downloaded weights trained on the COCO dataset (\url{http://cocodataset.org/\#home}).\newline
 		We've only done 1000 steps of training with learning rate equal to 0.003.\newline
 		Our dataset consisted of only 360 labeled photos.
 	\end{frame}
-	\begin{frame}{Examples - COCO}
+	\begin{frame}{Examples -- COCO}
 		\includegraphics[scale=0.5]{images/coco-examples}
 	\end{frame}
 
-  	\begin{frame}{Examples - first example}
+  	\begin{frame}{Examples -- first example}
 		First example used weights trained on the COCO dataset and used this as a base for training on our dataset.
 	\end{frame}
   	\begin{frame}{Examples}
@@ -206,7 +206,7 @@
 		\includegraphics[scale=0.3]{examples/comparison_1000_step/session_one-10.jpg}
 	\end{frame}
 	
-  	\begin{frame}{Examples - second example}
+  	\begin{frame}{Examples -- second example}
 		Second example used the MobileNet model with weights trained on COCO dataset without additional training on our dataset.
 	\end{frame}
   	\begin{frame}{Examples}
@@ -217,7 +217,7 @@
 	\end{frame}
 	
 	
-  	\begin{frame}{Examples - third example}
+  	\begin{frame}{Examples -- third example}
 		Third example used the MobileNet model with random initial weights.
 	\end{frame}
   	\begin{frame}{Examples}
