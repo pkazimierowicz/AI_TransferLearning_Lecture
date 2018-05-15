@@ -83,29 +83,24 @@
 \begin{document}
   	\maketitle
 	\part{Why Transfer Learning is fun and profit?}
-	Topics that we will cover today:
-		\begin{frame}{Outline}
-			\begin{enumerate}
-				\item What is Transfer Learning 
-				\item Why Transfer Learning is needed
-				\item What are potential use cases of Transfer Learning 
-				\item How to do this in practice
-				\item Demo and excercise for you
+	\section{Topics that we will cover today:}
+	\begin{frame}{Outline}
+		\begin{enumerate}
+			\item What is Transfer Learning 
+			\item Why Transfer Learning is needed
+			\item What are potential use cases of Transfer Learning 
+			\item How to do this in practice
+			\item Demo and excercise for you
 		\end{enumerate}
 	\end{frame}
 	\section{Introduction}
 		\begin{frame}{What will be talking about?}
 			\begin{block}{Transfer learning (Inductive transfer) for Convolutional Neural Networks (ConvNets)}
-				\newline
-				\newline
 				Process where structure or knowledge from a learning problem is used to enhance learning on a related problem\footnote{West, Jeremy; Ventura, Dan; Warnick, Sean (2007), "A Theoretical Foundation for Inductive Transfer", \url{http://cpms.byu.edu/springresearch/abstract-entry?id=861}}. 
-				\newline
-				\newline
 			\end{block}
 			Example: \newline
 			Take an image classification model that is capable to correctly label common objects (a dog, a tree or an airplane)
 			Retrain it to label types of yoghurt on a production lane.
-			
 		\end{frame}
 	
 	\section{Steps needed to be designed for image classification model:}
@@ -132,8 +127,9 @@
 	 \end{frame}
  
  	\begin{frame}{Sounds easy, but in reality it looks something like this...}
- 	\centering
-	 \includegraphics[scale=0.6]{images/design}
+		\begin{center}
+			\makebox[\textwidth]{\includegraphics[width=0.9\paperwidth]{images/googlenet}}
+		\end{center}
 	\end{frame}
  
 	\begin{frame}{But there is a problem...}
@@ -186,7 +182,9 @@
 
 \section{But first, let's talk a bit about theory...}
   	\begin{frame}{How does transfer learning work?}
-			 \includegraphics[scale=0.6]{images/interpr}
+		\begin{center}
+			\makebox[\textwidth]{\includegraphics[width=0.9\paperwidth]{images/interpr}}
+		\end{center}
 	 \end{frame}
   	\begin{frame}{Let's sum this up!}
 		We have three approaches possible to transfer learning:
